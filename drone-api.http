@@ -1,0 +1,37 @@
+### Register Drone
+POST http://localhost:8080/api/drones
+Content-Type: application/json
+
+{
+    "serialNumber": "DRONETEST",
+    "model": "CRUISERWEIGHT",
+    "batteryCapacity": 90
+}
+
+###
+
+### Load Medication
+POST http://localhost:8080/api/drones/1/load
+Content-Type: application/json
+
+{
+    "name": "ANTIBIOTICS",
+    "weight": 200,
+    "code": "MEDICINE_001",
+    "image": "antiobiotics.png"
+}
+
+###
+
+### Get Loaded Medications
+GET http://localhost:8080/api/drones/1/medications
+
+###
+
+### Get Available Drones
+GET http://localhost:8080/api/drones/available
+
+###
+
+### Get Battery Level
+GET http://localhost:8080/api/drones/1/battery
